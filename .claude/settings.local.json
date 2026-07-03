@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Read(//tmp/claude-1000/**)",
+      "Bash(wait *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(yarn lint *)",
+      "Bash(yarn add *)",
+      "Bash(npx eslint *)",
+      "Bash(node /tmp/claude-1000/verify02/decode-test.js)",
+      "Bash(node -e ' *)",
+      "Bash(yarn build *)",
+      "Bash(python3 verify_unit03.py)",
+      "Bash(python3 -m pip show playwright)",
+      "Bash(python3 -c \"import sys; print\\(sys.path\\)\")",
+      "Bash(pip3 list *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m venv /tmp/claude-1000/verify02/venv)",
+      "Bash(/tmp/claude-1000/verify02/venv/bin/pip install *)",
+      "Bash(/tmp/claude-1000/verify02/venv/bin/playwright install *)",
+      "Bash(/tmp/claude-1000/verify02/venv/bin/python verify_unit03.py)",
+      "Bash(rm -rf \"app/\\(dashboard\\)/overview\")"
+    ]
+  }
+}
