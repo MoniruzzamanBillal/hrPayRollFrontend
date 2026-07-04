@@ -22,6 +22,22 @@ export const getDecodedAccessToken = <
   }
 };
 
+export const useGetUser = () => {
+  const token = getAccessToken();
+
+  if (!token) return null;
+
+  try {
+    const decoded = jwt.decode(token);
+
+    if (!decoded || typeof decoded === "string") return null;
+
+    return decoded;
+  } catch {
+    return null;
+  }
+};
+
 export const isTokenExpired = (token: string): boolean => {
   const decodedToken = jwt.decode(token) as JwtPayload;
   try {
